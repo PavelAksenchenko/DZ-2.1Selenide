@@ -40,7 +40,7 @@ public class SelenideTest {
     }
 
     @Test
-       void errorExpectedWhenBlankPhone() {
+       void errorExpectedWhenEmptyFieldPhone() {
         open("http://localhost:9999");
         $("[type='text']").setValue("Иванов Николай");
         $("[type='tel']").setValue("");
