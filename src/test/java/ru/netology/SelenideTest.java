@@ -46,7 +46,7 @@ public class SelenideTest {
         $("[type='tel']").setValue("");
         $("[class='checkbox__box']").click();
         $("[type='button']").click();
-        $("[data-test-id=Phone].input_invalid .input__sub").shouldHave
+        $("[data-test-id=phone].input_invalid .input__sub").shouldHave
                 (exactTextCaseSensitive("Поле обязательно для заполнения"));
     }
 
