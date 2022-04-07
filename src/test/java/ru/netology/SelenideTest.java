@@ -31,7 +31,7 @@ public class SelenideTest {
     @Test
     void errorExpectedWhenEmptyFieldName() {
         open("http://localhost:9999");
-        $("[type='text']").setValue(" ");
+        $("[type='text']").setValue("");
         $("[type='tel']").setValue("+79882223345");
         $("[class='checkbox__box']").click();
         $("[type='button']").click();
@@ -43,7 +43,7 @@ public class SelenideTest {
        void errorExpectedWhenEmptyFieldPhone() {
         open("http://localhost:9999");
         $("[type='text']").setValue("Иванов Николай");
-        $("[type='tel']").setValue("");
+        $("[type='tel']").setValue(" ");
         $("[class='checkbox__box']").click();
         $("[type='button']").click();
         $("[data-test-id=name].input_invalid .input__sub").shouldHave
