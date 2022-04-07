@@ -43,10 +43,10 @@ public class SelenideTest {
        void errorExpectedWhenEmptyFieldPhone() {
         open("http://localhost:9999");
         $("[type='text']").setValue("Иванов Николай");
-        $("[type='tel']").setValue(" ");
+        $("[type='tel']").setValue("");
         $("[class='checkbox__box']").click();
         $("[type='button']").click();
-        $("[data-test-id=name].input_invalid .input__sub").shouldHave
+        $("[data-test-id=Phone].input_invalid .input__sub").shouldHave
                 (exactTextCaseSensitive("Поле обязательно для заполнения"));
     }
 
