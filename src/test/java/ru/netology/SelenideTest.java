@@ -31,7 +31,7 @@ public class SelenideTest {
     @Test
     void errorExpectedWhenEmptyFieldName() {
         open("http://localhost:9999");
-        $("[type='text']").setValue("");
+        $("[type='text']").setValue(" ");
         $("[type='tel']").setValue("+79882223345");
         $("[class='checkbox__box']").click();
         $("[type='button']").click();
