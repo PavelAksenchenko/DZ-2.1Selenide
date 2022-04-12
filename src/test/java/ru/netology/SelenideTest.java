@@ -19,7 +19,6 @@ public class SelenideTest {
 
     @Test
     void getTrueInputValidForm() {
-        open("http://localhost:9999");
         SelenideElement form = $("[class='form form_size_m form_theme_alfa-on-white']");
         form.$("[type=text]").setValue("Иванов Николай");
         form.$("[type=tel]").setValue("+79882223345");
@@ -30,7 +29,6 @@ public class SelenideTest {
 
     @Test
     void errorExpectedWhenEmptyFieldName() {
-        open("http://localhost:9999");
         $("[type='text']").setValue("");
         $("[type='tel']").setValue("+79882223345");
         $("[class='checkbox__box']").click();
@@ -41,7 +39,6 @@ public class SelenideTest {
 
     @Test
        void errorExpectedWhenEmptyFieldPhone() {
-        open("http://localhost:9999");
         $("[type='text']").setValue("Иванов Николай");
         $("[type='tel']").setValue("");
         $("[class='checkbox__box']").click();
@@ -52,7 +49,6 @@ public class SelenideTest {
 
     @Test
     void errorExpectedWhenInputIncorrectName() {
-        open("http://localhost:9999");
         $("[type='text']").setValue("Nikolay");
         $("[type='tel']").setValue("+79882223345");
         $("[class='checkbox__box']").click();
@@ -63,7 +59,6 @@ public class SelenideTest {
 
     @Test
     void errorExpectedWhenInputIncorrectTelNumber() {
-        open("http://localhost:9999");
         $("[type='text']").setValue("Иванов Николай");
         $("[type='tel']").setValue("+7 988 222 33 45");
         $("[class='checkbox__box']").click();
@@ -74,7 +69,6 @@ public class SelenideTest {
 
     @Test
     void errorExpectedWhenUncheckedCheckbox() {
-        open("http://localhost:9999");
         $("[type='text']").setValue("Иванов Николай");
         $("[type='tel']").setValue("+79882223345");
 //        $("[class='checkbox__box']").click();
